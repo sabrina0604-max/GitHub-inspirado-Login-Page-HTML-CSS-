@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tela-inteira{
+    display: flex;
+    height: 100vh;
+}
+
+
+.container-foto{
+    position: relative;
+    height: 100vh;
+    flex: 1;
+}
+
+.foto{
+    height: 100%;
+}
+
+.foto img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position:bottom;
+}
+
+/*Textos da imagem esquerda*/
+.escritas{
+    position: absolute;
+    color: white;
+    width: 80%;
+
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%);
+
+    text-shadow: 2px 2px 4px black;
+}
+
+h1{
+    font-size: 40px;
+    margin: 20px auto 10px;
+    font-weight: bold;
+}
+
+.codigo{
+    color:purple;
+}
+
+.escritas .descricao{
+    font-size:14px;
+    margin-bottom: 20px;
+}
+
+.categorias{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icone{
+    color:purple;
+    border: 1px solid black;
+    background-color: black;
+
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+    min-height: 32px;
+
+    border-radius: 50%;
+    margin-right: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.icone i{
+    font-size: 14px;
+}
+
+.detalhes h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.detalhes p{
+    font-size: 14px;
+}
+
+/*Formulario*/
+
+.formulario{
+    flex:1;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+.foto-logo{
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+.formulario img{
+    width: 100%;
+}
+
+.formulario h2{
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.formulario p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color:#ccc
+}
+
+/*inputs*/
+
+.form{
+    width: 100%;
+    max-width: 500px;
+}
+
+.input-container{
+    position: relative;
+    width: 100%;
+}
+
+.input-container i{
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.input-container input{
+    width: 100%;
+    height: 40px;
+
+    background-color: black;
+    color: #ccc;
+
+    padding: 0 10px 0 30px; 
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    margin-top: 5px;   
+}
+
+label[for="senha"]{
+    display: block;
+    margin-top: 15px;
+}
+
+.form a{
+    text-decoration: none;
+    color:purple;
+    text-align: right;
+    display: block;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.form a:hover{
+    color: white;
+}
+
+/*Botão login*/
+
+.formulario input[type="submit"]{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+
+    text-align: center;
+
+    background-color: rgb(77, 0, 128);
+    color: white;
+
+    border: 1px solid rgb(77, 0, 128);
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+.formulario input[type="submit"]:hover{
+    background-color: rgb(60, 1, 99);
+}
+
+/*seprador*/
+.separador{
+    display: flex;
+    align-items: center;
+    width: 100%;         
+    max-width: 400px;     
+    margin: 20px 0;
+}
+
+.separador::before,
+.separador::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #aaa;
+}
+
+.separador span{
+    padding: 0 10px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/*botões sociais*/
+.links{
+    display: flex;
+    gap: 15px;
+}
+
+.outros-acessos{
+    width: 150px;
+    height: 50px;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.outros-acessos:hover{
+    color: purple;
+}
+
+.outros-acessos img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.criar-conta p{
+    color:#ddd;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.criar-conta a{
+    text-decoration: none;
+    color:purple;
+    transition: 0.3s;
+}
+
+.criar-conta a:hover{
+    color:rgb(77, 0, 128);
+}
+
+
+@media(max-width:450px){
+
+    body{
+        overflow: auto;
+    }
+
+    .container-foto{
+        display: none;
+    }
+
+    .formulario{
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .form{
+        width: 100%;
+    }
+
+    .links{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .outros-acessos{
+        width: 100%;
+    }
+
+}
